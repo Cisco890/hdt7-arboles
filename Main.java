@@ -29,7 +29,10 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        // Mostrar el diccionario en orden
+        System.out.println("Diccionario ordenado:");
+        transversal.InOrder(diccionario.root);
+        System.out.println();
 
         // Traducir el archivo texto.txt
         try (BufferedReader reader = new BufferedReader(new FileReader("texto.txt"))) {
