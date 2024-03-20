@@ -23,12 +23,15 @@ public class Pruebas {
         assertEquals("tarea", dictionary.search("homework"));
         assertEquals("mujer", dictionary.search("woman"));
         assertEquals("pueblo", dictionary.search("town"));
-        assertEquals("si", dictionary.search("yes"));
+        assertEquals("si", dictionary.search("yes"));// se toma el valor (palabra en español) para encontrar la Key
     
 
         // Verificar la traducción de palabras desconocidas
         assertEquals(null, dictionary.search("car"));
         assertEquals(null, dictionary.search("book"));
         assertEquals(null, dictionary.search("computer"));
+
+        dictionary.insert("car", "carro");
+        assertEquals("carro", dictionary.search("car"));// se define una de las palabras indefinidas y se vuelve a buscar para mostrar que funciona
     }
 }
